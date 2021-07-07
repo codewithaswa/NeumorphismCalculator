@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap");
+
+:root {
+  /* Font */
+  --body-font: "Orbitron", sans-serif;
+
+  /* Color */
+  --main-color: #f1f3f6;
+  --first-button-color: #2b2525;
+  --calc-color: #ccd5cb;
+  --text-color: #ffffff;
+}
+
+/* STARTED */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+  background-color: var(--main-color);
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background-color: var(--body-font);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: inset 2px 2px 12px var(--text-color), 2px 2px 12px rgba(0, 0, 0, 0.16);
+  display: grid;
+  grid-template-columns: repeat(4, 77px);
+}
+
+#output {
+  grid-column: span 4;
+  height: 80px;
+  width: 300px;
+  background-color: var(--calc-color);
+  border: none;
+  border-radius: 30px;
+  color: var(--first-button-color);
+  font-size: 25px;
+  text-align: end;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+button {
+  padding: 10px;
+  width: 67px;
+  height: 45px;
+  margin: 10px 0;
+  background-color: var(--main-color);
+  color: var(--first-button-color);
+  box-shadow: -5px -5px 15px var(--text-color), 5px 5px 15px rgba(0, 0, 0, 0.16);
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  outline: none;
+}
+
+.clear {
+  width: 140px;
+}
+
+.sign {
+  background-color: var(--first-button-color);
+  color: var(--text-color);
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator - Codewith Aswa.</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <p id="output">0</p>
+
+        <button onclick="Clear()" class="clear sign">C</button> <br />
+        <button onclick="Calc('%')" class="sign">%</button>
+        <button onclick="Calc('/')" class="sign">/</button>
+        <button onclick="Calc('7')">7</button>
+        <button onclick="Calc('8')">8</button>
+        <button onclick="Calc('9')">9</button>
+        <button onclick="Calc('*')" class="sign">*</button>
+        <button onclick="Calc('4')">4</button>
+        <button onclick="Calc('5')">5</button>
+        <button onclick="Calc('6')">6</button>
+        <button onclick="Calc('-')" class="sign">-</button>
+        <button onclick="Calc('3')">3</button>
+        <button onclick="Calc('2')">2</button>
+        <button onclick="Calc('1')">1</button>
+        <button onclick="Calc('+')" class="sign">+</button>
+        <button onclick="Calc('0')">0</button>
+        <button onclick="Calc('00')">00</button>
+        <button onclick="Calc('.')">.</button>
+        <button onclick="Equal()" class="sign">=</button>
+      </div>
+    </div>
+
+    <script>
+      function Clear() {
+        document.getElementById("output").innerHTML = "0";
+      }
+
+      function removeZero() {
+        var value = document.getElementById("output").innerHTML;
+        if (value == "0") {
+          value = "";
+          document.getElementById("output").innerHTML = value;
+        }
+      }
+
+      function Calc(value) {
+        removeZero();
+        document.getElementById("output").innerHTML += value;
+      }
+
+      function Equal() {
+        removeZero();
+        var equation = document.getElementById("output").innerHTML;
+        var solved = eval(equation);
+
+        document.getElementById("output").innerHTML = solved;
+      }
+    </script>
+  </body>
+</html>
